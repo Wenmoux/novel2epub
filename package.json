@@ -1,0 +1,32 @@
+{
+  "name": "novel2epub",
+  "version": "1.0.0",
+  "description": "这是一个下载小说并生成epub脚本",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wenmoux/novel2epub.git"
+  },
+  "keywords": [
+    "epub"
+  ],
+  "author": "wenmoux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wenmoux/novel2epub/issues"
+  },
+  "homepage": "https://github.com/Wenmoux/novel2epub#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "cheerio": "^1.0.0-rc.12",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "jszip": "^3.10.1",
+    "path": "^0.12.7",
+    "url": "^0.11.3",
+    "util": "^0.12.5"
+  }
+}

@@ -1,0 +1,125 @@
+/*基础样式*/
+body{padding:0%;margin-top:0%;margin-bottom:0%;margin-left:1%;margin-right:1%;line-height:1.2;text-align:justify;}
+h1{line-height:1.2;text-align:center;font-family:"DK-HEITI", "方正兰亭黑简体", "黑体";font-weight:bold;font-size:1.65em;}
+h2{line-height:1.2;text-align:center;font-family:"DK-FANGSONG", "方正仿宋", "华文仿宋", "仿宋";text-align:right;font-weight:light;font-size:1.5em;margin-top:0.75em;border-right:0.2em solid #4a4d4a;}
+h3{line-height:1.2;text-align:center;font-family:"DK-XIAOBIAOSONG", "方正小标宋简体";font-weight:bold;font-size:1.35em;}
+h4{line-height:1.2;text-align:center;font-family:"DK-XIAOBIAOSONG", "方正小标宋简体";font-weight:bold;font-size:0.95em;line-height:1;}
+div{margin:0px;padding:0px;text-align:justify;}
+p{font-family:"DK-SONGTI", "方正宋三简体", "方正书宋", "宋体";text-indent:2em;duokan-text-indent:2em;display:block;line-height:1.3em;margin-top:0.4em;margin-bottom:0.4em;}
+td{padding:3px 0px;}
+ol{font-size:16px;}
+li{clear:both;display:block;list-style:none;}
+td{padding:3px 0px;}
+/*图片相关*/
+.illus{text-indent:0em;text-align:center;margin:0 0 2em 0;}
+.illus.single{margin:0 0;}
+/*插图盒子*/
+div.duokan-image-single{margin:0.5em auto;/*插图盒子上下外边距为0.5em，左右设置auto是为了水平居中这个盒子*/}
+.cover{margin:0em;padding:0em;text-indent:0em;text-align:center;}
+.coverborder{border-style:none solid none solid;border-color:#000000;border-width:1px;}
+/*书名页相关*/
+.title_page{max-width:17em;padding:10% 0;margin:auto auto;}
+.title_page .author,.title_page .illustrator{text-align:right;font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";}
+.title_page .author{font-size:1.2em;margin-top:1.5em;}
+.title_page .illustrator{font-size:1.2em;margin-top:0.5em;}
+/*Logo页样式*/
+.logoarea{text-indent:0em;text-align:center  !important;margin-top:20%;margin-bottom:0%;}
+.logoimage{width:100%;}
+/*制作信息相关*/
+section,.section{margin-top:1.5em;}
+section > section,.section > .section{margin-top:0.5em;}
+.copyright{font-family:"DK-SONGTI", "方正宋三简体", "方正书宋", "宋体";}
+.copyright-title{text-indent:0em;font-weight:bold;margin-top:1em;margin-bottom:1em;text-align:center;}
+.book-title{text-indent:0em;text-align:center;}
+.cutline{margin:0;height:1px;border:none;border-top:1px solid #555;text-align:center;}
+/*目录页样式*/
+/*目录页超链接样式*/
+.nodeco{text-decoration:none;}
+/*目录页超链接颜色*/
+a:link{color:black;}
+a:hover{color:blue;}
+/* 拼音样式 */
+ruby{ruby-align:center;margin-right:0.5em;}
+/* 拼音尾字样式 */
+ruby.duokan-rubylast{margin-right:0em;}
+/* 拼音文字样式 */
+ruby > rt{font-family:"DK-SYMBOL", "Symbol";font-size:0.5em;}
+/*引文*/
+p.bodycontent-reference-text{font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";font-size:16px;duokan-text-indent:2em;text-indent:2em;}
+/* 署名楷体居右 */
+p.signature{font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";font-size:16px;font-weight:bold;text-align:right;}
+/* 图说楷体居中 */
+p.duokan-note-center{font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";font-size:14px;text-align:center;}
+/*多看注释*/
+a.duokan-footnote img{width:0.85em;/*<a>标签内的注释图片宽度为正文字大小的0.85倍*/}
+/*多看注释内容*/
+li.duokan-footnote-item p{text-indent:0;/*如果你是使用单标签p来设置正文格式，需要添加这个声明去除首行缩进*/font-family:"仿宋";/*注释正文字体*/font-size:0.85em;/*注释正文字号比正文字号要小一些*/line-height:1.35em;/*行高*/text-align:justify;/*两端对齐*/}
+/*多看注释盒子*/
+ol.duokan-footnote-content{border-top:1px #000 solid;/*模拟纸书，在第1个注释上面添加一条横线，以与正文隔开*/margin-top:1.5em;/*注释内容与正文的间距*/}
+sup{font-size:0.75em;line-height:1.2;vertical-align:super !important;}
+/*多看日文假名显示*/
+.jp{font-family:"DK-XIAOBIAOSONG";}
+/* 颜色、阴影 */
+.color1{/*红色*/color:#FF0000;}
+.color2{/*黄色*/color:#FFFF00;}
+.color3{/*蓝色*/color:#00CED1;}
+.color4{/*黑色*/color:#000000;}
+.color5{/*白色*/color:#FFFFFF;}
+.color6{/*绿色*/color:#00FF33;}
+.color7{/*紫色*/color:#800080;}
+.color8{/*粉色*/color:#FF00FF;}
+.color9{/*橙色*/color:#FFAA33;}
+.color10{/*棕色*/color:#800000;}
+.shadow1{/*蓝色阴影*/text-shadow:0 0 3px #00CED1;text-shadow:0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1;}
+.shadow2{/*白色阴影*/text-shadow:0 0 3px #FFFFFF;text-shadow:0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF;}
+.shadow3{/*黑色阴影*/text-shadow:0 0 3px #000000;text-shadow:0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000;}
+.shadow4{/*橙色阴影*/text-shadow:0 0 3px #FFAA33;text-shadow:0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33;}
+/*文字大小*/
+.em04{font-size:0.4em;}
+.em05{font-size:0.5em;}
+.em06{font-size:0.6em;}
+.em07{font-size:0.7em;}
+.em08{font-size:0.8em;}
+.em09{font-size:0.9em;}
+.em11{font-size:1.1em;}
+.em12{font-size:1.2em;}
+.em13{font-size:1.3em;}
+.em14{font-size:1.4em;}
+.em15{font-size:1.5em;}
+.em16{font-size:1.6em;}
+.em17{font-size:1.7em;}
+.em18{font-size:1.8em;}
+.em19{font-size:1.9em;}
+.em20{font-size:2em;}
+.em21{font-size:2.1em;}
+.em22{font-size:2.2em;}
+.em23{font-size:2.3em;}
+.em24{font-size:2.4em;}
+.em25{font-size:2.5em;}
+.em26{font-size:2.6em;}
+.em27{font-size:2.7em;}
+.em28{font-size:2.8em;}
+.em29{font-size:2.9em;}
+.em30{font-size:3em;}
+/*以下填写自定义css样式*/
+/*字体*/
+@font-face{font-family:'contents';font-weight:normal;font-style:normal;src:url(../Fonts/tianshi.ttf);}
+.contents{font-size:1.3em;font-family:'contents';text-indent:0em;text-align:left;padding:0.2em 0 0.2em 0;margin:1.4em 0 0.7em 2em;font-weight:bold;}
+@font-face{font-family:"content1";src:url(../Fonts/huawen.ttf);}
+.content1{font-family:content1;text-indent:0em;text-align:center;}
+@font-face{font-family:"content2";src:url(../Fonts/san-serif.ttf);}
+.content2{font-family:content2;}
+@font-face{font-family:"content3";src:url(../Fonts/OptimaNovaLTPro-Light.OTF);}
+.content3{font-family:content3;}
+/*两端对齐*/
+.title{text-align:left;text-indent:0em;text-align:justify;text-align-last:justify;}
+/*文本框*/
+.box{boxbackground-color:#FFFFFF;color:#000000;padding:1px 1px 1px 1px;margin:0;border-radius:0;border:solid 1px #000000;}
+/*字体颜色控制*/
+.colorc1{color:#000000;}
+/*书名颜色，默认黑色。*/
+.colorc2{color:#000000;}
+/*卷数颜色，默认黑色。*/
+.color1{color:#000000;}
+/*印象色，用于制作者人名、章节标题等处，默认黑色。*/
+/*补充颜色写在下面，并注明用处*/
