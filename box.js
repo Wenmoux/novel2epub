@@ -3,13 +3,14 @@ const path = require('path');
 const superagent = require('axios');
 const cheerio = require('cheerio');
 const { promisify } = require('util');
-const epub=   require( "./index.js")
+const epub=   require( "./epub.js")
 //const { createEpub } = require('epub-gen');
 
 const writeFileAsync = promisify(fs.writeFile);
 
 const platforms = {
-  'po18': require('./p18.js'),
+  'po18': require('./platforms/p18.js'), //po18脸红心跳
+  'douban': require('./platforms/douban.js'),//豆瓣阅读
   // 添加其他平台的脚本
 };
 

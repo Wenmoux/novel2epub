@@ -1,10 +1,7 @@
     let content = []
     let option = {}
-    const fs = require("fs")
     const axios = require("axios")
     const cheerio = require("cheerio")
-    let paa = ""
-
     headers = {
         "x-requested-with": "XMLHttpRequest",
         "cookie": "",
@@ -21,11 +18,9 @@ async function getNovel(bid) {
         }
         const detail = await getdetail(bid);
         if (detail) {
-            option = Object.assign({}, detail);
-            paa = `./${detail.title}.txt`        
-            console.log(detail);
+            option = Object.assign({}, detail); 
             await getCon(detail);
-           return option
+            return option
         }
     
 }

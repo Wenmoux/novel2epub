@@ -157,7 +157,7 @@ function chap(mulu) {
         OEBPS.file(`Chapter/chapter_${i+1}.html`, cha)
     }
     let c = copf(options.title,
-        options.author, options.desc, options.content, imglist2,content,uuid)
+        options.author, options.desc, options.content, imglist2,content,uuid,options.pub)
     OEBPS.file("content.opf", c)
     zip.generateAsync({
         type: "nodebuffer"
