@@ -1,35 +1,35 @@
-    let content = []
-    let option = {}
-    const axios = require("axios")
-    const cheerio = require("cheerio")
-    headers = {
-        "x-requested-with": "XMLHttpRequest",
-        "cookie": "",
-        "Referer": "https://www.po18.tw",
-        proxy: false
-    }
+let content = []
+let option = {}
+const axios = require("axios")
+const cheerio = require("cheerio")
+headers = {
+    "x-requested-with": "XMLHttpRequest",
+    "cookie": "",
+    "Referer": "https://www.po18.tw",
+    proxy: false
+}
 
 
 
-async function getNovel(bid) { 
-        if(headers.cookie.length==0) {
+async function getNovel(bid) {
+    if (headers.cookie.length == 0) {
         console.log("please 先填写cookie")
         return;
-        }
-        const detail = await getdetail(bid);
-        if (detail) {
-            option = Object.assign({}, detail); 
-            await getCon(detail);
-            return option
-        }
-    
+    }
+    const detail = await getdetail(bid);
+    if (detail) {
+        option = Object.assign({}, detail);
+        await getCon(detail);
+        return option
+    }
+
 }
 
 function getContent(bid, pid, ii) {
     return new Promise(async resolve => {
-        try {      
+        try {
             headers.referer = `https://www.po18.tw/books/${bid}/articles/${pid}`;
-            const response = await axios.get(`https://www.po18.tw/books/${bid}/articlescontent/${pid}`, {headers});
+            const response = await axios.get(`https://www.po18.tw/books/${bid}/articlescontent/${pid}`, { headers });
             let r = response.data.replace(/ &nbsp;&nbsp;/g, "");
             const $ = cheerio.load(r);
             $("blockquote").remove();
@@ -37,7 +37,7 @@ function getContent(bid, pid, ii) {
             $("h1").remove();
             option.content[ii] = {
                 title: name,
-                data: $("body").html().replace(/&nbsp;/g, "") 
+                data: $("body").html().replace(/&nbsp;/g, "")
             }
         } catch (err) {
             console.log(err)
@@ -57,7 +57,7 @@ async function getCon(detail) {
     let k = 0;
     for (const url of urls) {
         console.log(`第${urls.indexOf(url) + 1}页`);
-        const {data} = await axios.get(url, {headers});
+        const { data } = await axios.get(url, { headers });
         const $ = cheerio.load(data);
         const list = $('#w0>div');
         console.log(list.length);
@@ -70,10 +70,10 @@ async function getCon(detail) {
                     return Promise.resolve();
                 } else {
                     console.log("    下载中...");
-k++
+                    k++
                     const href = $(".l_btn>a", li).attr('href');
                     const id = href.split('/');
-                    return getContent(id[2], id[4], k, option).then(() => {});
+                    return getContent(id[2], id[4], k, option).then(() => { });
                 }
             })
         );
@@ -85,7 +85,7 @@ function getdetail(bid) {
     return new Promise(async resolve => {
         try {
             //     console.log(bid)
-            let r = await axios.get(`https://www.po18.tw/books/${bid}`, {headers});
+            let r = await axios.get(`https://www.po18.tw/books/${bid}`, { headers });
             let $ = cheerio.load(r.data);
             let zh = $("dd.statu").text().match(/\d+/)
             let detail = {
@@ -93,9 +93,9 @@ function getdetail(bid) {
                 author: $("a.book_author").text(),
                 cover: $('.book_cover>img').attr("src"),
                 description: $('.B_I_content').text(),
-                content: [],             
+                content: [],
                 bid,
-                pub:"po18脸红心跳",
+                pub: "po18脸红心跳",
                 pageNum: Math.ceil(zh / 100)
             };
             console.log($("a.book_author").text())
@@ -109,4 +109,4 @@ function getdetail(bid) {
         resolve()
     })
 }
-module.exports={getNovel}
+module.exports = { getNovel }

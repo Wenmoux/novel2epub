@@ -1,125 +1,551 @@
-/*基础样式*/
-body{padding:0%;margin-top:0%;margin-bottom:0%;margin-left:1%;margin-right:1%;line-height:1.2;text-align:justify;}
-h1{line-height:1.2;text-align:center;font-family:"DK-HEITI", "方正兰亭黑简体", "黑体";font-weight:bold;font-size:1.65em;}
-h2{line-height:1.2;text-align:center;font-family:"DK-FANGSONG", "方正仿宋", "华文仿宋", "仿宋";text-align:right;font-weight:light;font-size:1.5em;margin-top:0.75em;border-right:0.2em solid #4a4d4a;}
-h3{line-height:1.2;text-align:center;font-family:"DK-XIAOBIAOSONG", "方正小标宋简体";font-weight:bold;font-size:1.35em;}
-h4{line-height:1.2;text-align:center;font-family:"DK-XIAOBIAOSONG", "方正小标宋简体";font-weight:bold;font-size:0.95em;line-height:1;}
-div{margin:0px;padding:0px;text-align:justify;}
-p{font-family:"DK-SONGTI", "方正宋三简体", "方正书宋", "宋体";text-indent:2em;duokan-text-indent:2em;display:block;line-height:1.3em;margin-top:0.4em;margin-bottom:0.4em;}
-td{padding:3px 0px;}
-ol{font-size:16px;}
-li{clear:both;display:block;list-style:none;}
-td{padding:3px 0px;}
-/*图片相关*/
-.illus{text-indent:0em;text-align:center;margin:0 0 2em 0;}
-.illus.single{margin:0 0;}
-/*插图盒子*/
-div.duokan-image-single{margin:0.5em auto;/*插图盒子上下外边距为0.5em，左右设置auto是为了水平居中这个盒子*/}
-.cover{margin:0em;padding:0em;text-indent:0em;text-align:center;}
-.coverborder{border-style:none solid none solid;border-color:#000000;border-width:1px;}
-/*书名页相关*/
-.title_page{max-width:17em;padding:10% 0;margin:auto auto;}
-.title_page .author,.title_page .illustrator{text-align:right;font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";}
-.title_page .author{font-size:1.2em;margin-top:1.5em;}
-.title_page .illustrator{font-size:1.2em;margin-top:0.5em;}
-/*Logo页样式*/
-.logoarea{text-indent:0em;text-align:center  !important;margin-top:20%;margin-bottom:0%;}
-.logoimage{width:100%;}
-/*制作信息相关*/
-section,.section{margin-top:1.5em;}
-section > section,.section > .section{margin-top:0.5em;}
-.copyright{font-family:"DK-SONGTI", "方正宋三简体", "方正书宋", "宋体";}
-.copyright-title{text-indent:0em;font-weight:bold;margin-top:1em;margin-bottom:1em;text-align:center;}
-.book-title{text-indent:0em;text-align:center;}
-.cutline{margin:0;height:1px;border:none;border-top:1px solid #555;text-align:center;}
-/*目录页样式*/
-/*目录页超链接样式*/
-.nodeco{text-decoration:none;}
-/*目录页超链接颜色*/
-a:link{color:black;}
-a:hover{color:blue;}
-/* 拼音样式 */
-ruby{ruby-align:center;margin-right:0.5em;}
-/* 拼音尾字样式 */
-ruby.duokan-rubylast{margin-right:0em;}
-/* 拼音文字样式 */
-ruby > rt{font-family:"DK-SYMBOL", "Symbol";font-size:0.5em;}
-/*引文*/
-p.bodycontent-reference-text{font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";font-size:16px;duokan-text-indent:2em;text-indent:2em;}
-/* 署名楷体居右 */
-p.signature{font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";font-size:16px;font-weight:bold;text-align:right;}
-/* 图说楷体居中 */
-p.duokan-note-center{font-family:"DK-KAITI", "方正楷体", "华文楷体", "楷体";font-size:14px;text-align:center;}
-/*多看注释*/
-a.duokan-footnote img{width:0.85em;/*<a>标签内的注释图片宽度为正文字大小的0.85倍*/}
-/*多看注释内容*/
-li.duokan-footnote-item p{text-indent:0;/*如果你是使用单标签p来设置正文格式，需要添加这个声明去除首行缩进*/font-family:"仿宋";/*注释正文字体*/font-size:0.85em;/*注释正文字号比正文字号要小一些*/line-height:1.35em;/*行高*/text-align:justify;/*两端对齐*/}
-/*多看注释盒子*/
-ol.duokan-footnote-content{border-top:1px #000 solid;/*模拟纸书，在第1个注释上面添加一条横线，以与正文隔开*/margin-top:1.5em;/*注释内容与正文的间距*/}
-sup{font-size:0.75em;line-height:1.2;vertical-align:super !important;}
-/*多看日文假名显示*/
-.jp{font-family:"DK-XIAOBIAOSONG";}
-/* 颜色、阴影 */
-.color1{/*红色*/color:#FF0000;}
-.color2{/*黄色*/color:#FFFF00;}
-.color3{/*蓝色*/color:#00CED1;}
-.color4{/*黑色*/color:#000000;}
-.color5{/*白色*/color:#FFFFFF;}
-.color6{/*绿色*/color:#00FF33;}
-.color7{/*紫色*/color:#800080;}
-.color8{/*粉色*/color:#FF00FF;}
-.color9{/*橙色*/color:#FFAA33;}
-.color10{/*棕色*/color:#800000;}
-.shadow1{/*蓝色阴影*/text-shadow:0 0 3px #00CED1;text-shadow:0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1, 0 0 0.1em #00CED1;}
-.shadow2{/*白色阴影*/text-shadow:0 0 3px #FFFFFF;text-shadow:0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF, 0 0 0.1em #FFFFFF;}
-.shadow3{/*黑色阴影*/text-shadow:0 0 3px #000000;text-shadow:0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000, 0 0 0.1em #000000;}
-.shadow4{/*橙色阴影*/text-shadow:0 0 3px #FFAA33;text-shadow:0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33, 0 0 0.1em #FFAA33;}
-/*文字大小*/
-.em04{font-size:0.4em;}
-.em05{font-size:0.5em;}
-.em06{font-size:0.6em;}
-.em07{font-size:0.7em;}
-.em08{font-size:0.8em;}
-.em09{font-size:0.9em;}
-.em11{font-size:1.1em;}
-.em12{font-size:1.2em;}
-.em13{font-size:1.3em;}
-.em14{font-size:1.4em;}
-.em15{font-size:1.5em;}
-.em16{font-size:1.6em;}
-.em17{font-size:1.7em;}
-.em18{font-size:1.8em;}
-.em19{font-size:1.9em;}
-.em20{font-size:2em;}
-.em21{font-size:2.1em;}
-.em22{font-size:2.2em;}
-.em23{font-size:2.3em;}
-.em24{font-size:2.4em;}
-.em25{font-size:2.5em;}
-.em26{font-size:2.6em;}
-.em27{font-size:2.7em;}
-.em28{font-size:2.8em;}
-.em29{font-size:2.9em;}
-.em30{font-size:3em;}
-/*以下填写自定义css样式*/
-/*字体*/
-@font-face{font-family:'contents';font-weight:normal;font-style:normal;src:url(../Fonts/tianshi.ttf);}
-.contents{font-size:1.3em;font-family:'contents';text-indent:0em;text-align:left;padding:0.2em 0 0.2em 0;margin:1.4em 0 0.7em 2em;font-weight:bold;}
-@font-face{font-family:"content1";src:url(../Fonts/huawen.ttf);}
-.content1{font-family:content1;text-indent:0em;text-align:center;}
-@font-face{font-family:"content2";src:url(../Fonts/san-serif.ttf);}
-.content2{font-family:content2;}
-@font-face{font-family:"content3";src:url(../Fonts/OptimaNovaLTPro-Light.OTF);}
-.content3{font-family:content3;}
-/*两端对齐*/
-.title{text-align:left;text-indent:0em;text-align:justify;text-align-last:justify;}
-/*文本框*/
-.box{boxbackground-color:#FFFFFF;color:#000000;padding:1px 1px 1px 1px;margin:0;border-radius:0;border:solid 1px #000000;}
-/*字体颜色控制*/
-.colorc1{color:#000000;}
-/*书名颜色，默认黑色。*/
-.colorc2{color:#000000;}
-/*卷数颜色，默认黑色。*/
-.color1{color:#000000;}
-/*印象色，用于制作者人名、章节标题等处，默认黑色。*/
-/*补充颜色写在下面，并注明用处*/
+@charset "utf-8";
+@import url("../Styles/fonts.css");
+body {
+    padding: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    line-height: 130%;
+    text-align: justify;
+    font-family: "DK-SONGTI","st","宋体","zw",sans-serif;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 130%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    font-family: "DK-SONGTI","st","宋体","zw",sans-serif;
+}
+p.kaiti {
+    font-family: "DK-KAITI","kt","楷体","zw",serif;
+}
+
+p.fangsong {
+    font-family: "DK-FANGSONG","fs","仿宋","zw",serif;
+}
+
+span.xinli {
+    font-family: "DK-KAITI","kt","楷体","zw",serif;
+    color: #4e753f;
+}
+/** 英文斜体字 **/
+span.english{
+	font-style: italic;
+}
+div {
+    margin: 0px;
+    padding: 0px;
+    line-height: 120%;
+    text-align: justify;
+    font-family: "zw";
+}
+div.foot {
+    text-indent: 2em;
+    margin: 30% 5% 0 5%;
+    padding: 8px 0;
+}
+p.foot {
+    font-family: "DK-KAITI","kt","楷体","zw",serif;
+}
+
+/*扉页*/
+.booksubtitle {
+    padding: 10px 0 0px 0;
+    text-indent: 0em;
+    font-size: 75%;
+    font-family: "ht";    
+}
+
+.booktitle {
+   padding: 9% 0 0 0;
+   font-size: 1.3em;
+   font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
+   font-weight: normal;
+   text-indent: 0em;
+    color: #000;
+   text-align: center;
+   line-height: 1.6;
+}
+
+.booktitle0 {
+   font-size: 1.2em;
+   font-family: "fs";
+   text-indent: 0em;
+   text-align: center;
+   line-height: 1.8;
+}
+
+.booktitle1 {
+   padding: 0 0 0 0;
+   font-size: 0.85em;
+   font-family: "fs";
+   text-indent: 0em;
+   text-align: center;
+   line-height: 1.6;
+}
+
+.bookauthor {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+    padding: 5% 5px 0px 5px;
+    text-indent: 0em;
+    text-align: center;  
+    color: #000;
+    font-size: 90%;
+    line-height: 1.3;
+}
+
+.booktranslator {
+    padding: 1% 5px 0px 5px;
+    text-indent: 0em;
+    text-align: center;   
+    font-size: 85%;
+    line-height: 1.3;
+}
+
+.bookpub {
+    font-family: "DK-KAITI","kt","楷体","楷体_gb2312";
+    padding: 30% 5px 5px 5px;
+    text-indent: 0em;
+    color: #000;
+    text-align: center;  
+    font-size: 80%;
+}
+
+/*标题页*/
+body.head {
+ 	background-repeat:no-repeat no-repeat;
+	background-size:160px 229px;
+	background-position:bottom right;
+	background-attachment:fixed;
+}
+
+body.xhead {
+    background-color: #FDF5E6;
+}
+
+h1.head {
+    font-family: "DK-HEITI",黑体,sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #311a02;
+    text-indent: 0em;
+    font-weight: normal;
+    duokan-text-indent: 0em;
+    padding: auto;
+    text-align: center;
+    margin-top: -8em;
+}
+
+div.head {
+    border: solid 2px #ffffff;
+    padding: 2px;
+    margin: 2em auto 0.7em auto;
+    text-align: center;
+    width: 1em;
+}
+
+h1.head b {
+    font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    text-indent: 0em;
+    duokan-text-indent: 0em;
+    color: #311a02;
+    margin: 0.5em auto;
+    line-height: 140%;
+}
+
+div.back {
+    text-align: center;
+    text-indent: 0em;
+    duokan-text-indent: 0em;
+    margin: 4em auto;
+}
+
+img.back {
+    width: 70%;
+}
+img.back2 {
+    width: 40%;
+    margin: 2em 0 0 0;
+}
+/*正文*/
+/**楷体引文**/
+.titou {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+}
+.yinwen {
+    font-family: "DK-KAITI","kt","楷体","zw",serif;
+	margin-left: 2em;
+	text-indent: 0em;
+}
+.nicename {
+    font-family: "DK-HEITI",黑体,sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+body.head3 {
+    background-color: #a7bdcc;
+    color: #354f66;
+}
+
+body.head4 {
+    background-color: #bfd19b;
+    color: #4e753f;
+}
+
+h2.head {
+    font-family: "小标宋";
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 1em 2em 2em 0;
+    color: pink;
+    line-height: 140%;
+}
+
+h2.head span {
+    font-family: "仿宋";
+    font-size: 0.7em;
+    background-color: #3f83e8;
+    border-radius: 9px;
+    padding: 4px;
+    color: #fff;
+}
+
+
+div.logo {
+    margin: -2em 0% 0 0;
+    text-align: right;
+}
+
+img.logo {
+    width: 40%;
+}
+.imgl {
+    /*图片居右*/
+	margin: -8.8em 1em 4em 0em;
+    width: 80%;
+	text-align: right;
+}
+
+h1.head {
+	line-height:130%;
+	font-size:1.4em;
+	text-align: center;
+	color: #BA2213;
+	font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 1em;
+    font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
+	
+}
+h3 {
+    font-family: "DK-HEITI",黑体,sans-serif;
+    font-size: 1.1em;
+    margin: 1em 0;
+    border-left: 1.2em solid #00a1e9;
+    line-height: 120%;
+    padding-left: 3px;
+	color: #00a1e9;
+}
+h4 {
+    font-family: "DK-HEITI",黑体,sans-serif;
+    font-size: 1.1em;
+	text-align: center;
+    margin: 1em 0;
+    line-height: 120%;
+	color: #000;
+}
+h1.post {
+    font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
+    text-align: center;
+    font-size: 1.3em;
+	color: #026fca;
+    margin: 3em auto 2em auto;
+}
+.banquan {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+    text-align: left;
+    color: #000;
+	font-size:1.1em;
+    margin-bottom:1em;
+    text-indent: 1em;
+    duokan-text-indent: 1em;
+}
+p.post {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+}
+p.zy {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+    margin: 1em 0 0 1em;
+    padding: 5px 0px 5px 10px;
+    text-indent: 0em;
+    border-left: 5px solid #a9b5c1;
+}
+.sign {
+    font-family: "DK-KAITI","kt","楷体","zw",serif;
+    margin: 1em 2px 0 auto;
+    text-align: right;
+    font-size: 0.8em;
+    text-indent: 0em;
+    duokan-text-indent: 0em;
+}
+
+.mark {
+    font-family: "DK-HEITI",黑体,sans-serif;
+    font-size: 0.9em;
+    color: #fff;
+    text-indent: 0em;
+    duokan-text-indent: 0em;
+    background-color: maroon;
+    text-align: center;
+    padding: 0px;
+    margin: 2em 30%;
+}
+
+/*出版社*/
+.chubanshe img{
+	width:106px;
+	height:28px;
+}
+.chubanshe {
+	margin-top:20px;
+}
+.cr {
+	font-size:0.9em;
+}
+
+/*多看画廊*/
+div.duokan-image-single {
+    text-align: center;
+    margin: 0.5em auto; /*插图盒子上下外边距为0.5em，左右设置auto是为了水平居中这个盒子*/
+}
+img.picture-80 {
+    margin: 0; /*清除img元素的外边距*/
+    width: 80%; /*预览窗口的宽度*/
+    box-shadow: 3px 3px 10px #bfbfbf; /*给图片添加阴影效果*/
+}
+p.duokan-image-maintitle {
+    margin: 1em 0 0; /*图片说明的段间距*/
+    font-family: "楷体"; /*图片说明使用的字体*/
+    font-size: 0.9em; /*字体大小*/
+    text-indent: 0; /*首行缩进为零，当你使用单标签p来指定首行缩进为2em时，记得在需要居中的文本中清除缩进，因为样式是叠加的*/
+    text-align: center; /*图片说明水平居中*/
+    color: #a52a2a; /*字体颜色*/
+    line-height: 1.25em; /*行高，防止有很长的图片说明*/
+}
+
+
+/*制作说明页*/
+body.description {
+    background-image: url(../Images/001.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25% 10% 0;
+    font-size: 0.9em;
+}
+
+div.description-body {
+    width: 55%;
+    padding: 2em 1.3em;
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    border-style: solid;
+    border-color: #393939;
+    border-width: 0.3em;
+    border-radius: 5em;
+    background-color: #5a5a5a;
+    box-shadow: 2px 2px 3px #828281;
+}
+
+h1.description-title {
+    text-align: center;
+    font-family: "黑体";
+    font-size: 1.2em;
+    margin: 0 0 1em 0;
+    color: #FF9;
+    text-shadow: 1px 1px 0 black;
+}
+
+p.description-text {
+    color: #f9ddd2;
+    font-family: "准圆";
+    margin: 0;
+    text-align: justify;
+    text-indent: 0;
+    duokan-text-indent: 0;
+}
+
+hr.description-hr {
+    margin: 0.5em -1em;
+    border-style: dotted;
+    border-color: #9C9;
+    border-width: 0.05em 0 0 0;
+}
+
+p.tips {
+    text-align: justify;
+    text-indent: 0;
+    duokan-text-indent: 0;
+    font-family: "楷体";
+    font-size: 0.7em;
+    color: #FFC;
+    margin: 0;
+}
+
+/*版本说明页*/
+.ver {
+    font-family: "DK-CODE","DK-XIHEITI",细黑体,"xihei",sans-serif;
+	font-weight: bold;
+    font-size: 100%;
+    color: #000;
+    margin: 1em 0 1em 0;
+    text-align: center;
+}
+
+.vertitle {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+    font-size: 100%;
+    text-indent: 0em;
+    text-align: left;
+    duokan-text-indent: 0em;
+}
+
+.vertxt {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+	line-height: 100%;
+    font-size: 85%;
+    text-indent: 0em;
+    text-align: left;
+    duokan-text-indent: 0em;
+}
+.verchar {
+    font-family: "DK-KAITI","kt","楷体","楷体_gb2312";
+    text-align: left;
+    text-indent: 1em;
+    duokan-text-indent: 1em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+.vernote {
+    font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
+    font-size: 75%;
+    color: #686d70;
+    text-indent: 0em;
+    text-align: left;
+    duokan-text-indent: 0em;
+    padding-bottom: 15px;
+}
+
+.line {
+    border: dotted #A2906A;
+    border-width: 1px 0 0 0;
+}
+
+.entry {
+    margin-left: 18px;
+    font-size: 83%;
+    color: #8fe0a3;
+    text-indent: 0em;
+    duokan-text-indent: 0em;
+}
+/*版权信息*/
+.vol {
+    text-indent: 0em;
+    text-align: center;
+    padding: 0.8em;
+    margin: 0 auto 3px auto;
+    color: #000;
+    font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
+    font-size: 130%;
+    text-shadow: none;
+}
+
+.cp {
+    font-family: "DK-CODE","DK-XIHEITI",细黑体,"xihei",sans-serif;
+    color: #412938;
+    font-size: 70%;
+    text-align: left;
+    text-indent: 0em;
+    duokan-text-indent: 0em;
+}
+
+.xchar {
+    font-family: "DK-KAITI","kt","楷体","楷体_gb2312";
+    text-indent: 0em;
+    duokan-text-indent: 0em;
+}
+/*多看弹注*/
+sup img {
+	line-height: 100%;
+	width: auto;
+    height: 1.0em;
+    margin: 0em;
+    padding: 0em;
+	vertical-align: text-top;
+}
+
+ol {
+	margin-bottom:0;
+	padding:0 auto;
+	list-style-type: decimal;
+}
+.hr {
+	width:50%;
+	margin:2em 0 0 0.5em;
+	padding:0;
+	height:2px;
+	background-color: #F3221D;
+}
+
+.duokan-footnote-content{
+	padding:0 auto;
+	text-align: left;
+}
+
+.duokan-footnote-item {
+	font-family:"DK-XIHEITI",细黑体,"xihei",sans-serif;
+	text-align: left;
+	font-size: 80%;
+	line-height: 100%;
+	clear: both;
+	color:#000;
+	list-style-type:decimal;
+}
+
+li.duokan-footnote-item a {
+	font-family:"DK-HEITI";
+	text-align: left;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+
+a:hover {background: #81caf9}	
+a:active {background: yellow}
+.duokan-image-maintitle {
+	font-family:"DK-HEITI",黑体,"hei",sans-serif;
+	text-align: center;
+	text-indent: 0em;
+	duokan-text-indent: 0em;
+	font-size:90%;
+	color: #1F4150;
+	margin-top: 1em;
+}
+
+.duokan-image-subtitle {
+	font-family:"DK-XIHEITI",细黑体,"xihei",sans-serif;
+	text-align: center;
+	text-indent: 0em;
+	duokan-text-indent: 0em;
+	font-size:70%;
+	color: #3A3348;
+	margin-top: 1em;
+}

@@ -4,6 +4,9 @@
 ## 支持的网站列表
   - [x] [po18脸红心跳](https://www.po18.tw/site/alarm)
   - [x] [豆瓣阅读 ](https://read.douban.com/ebooks)  
+  - [x] [爱奇艺文学](https://wenxue.iqiyi.com/)
+  - [x] [河图文化](https://www.hotupub.net)  
+
   - ...
 
 ## how 咋使用它？

@@ -9,8 +9,10 @@ const epub=   require( "./epub.js")
 const writeFileAsync = promisify(fs.writeFile);
 
 const platforms = {
-  'po18': require('./platforms/p18.js'), //po18脸红心跳
+  'po18': require('./platforms/po18.js'), //po18脸红心跳
   'douban': require('./platforms/douban.js'),//豆瓣阅读
+  'hotupub': require('./platforms/hotupub.js'),//河图文化
+  'iqiyi': require('./platforms/iqiyi.js'),//爱奇艺文学
   // 添加其他平台的脚本
 };
 
