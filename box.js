@@ -13,6 +13,8 @@ const platforms = {
   'douban': require('./platforms/douban.js'),//豆瓣阅读
   'hotupub': require('./platforms/hotupub.js'),//河图文化
   'iqiyi': require('./platforms/iqiyi.js'),//爱奇艺文学
+  'xr': require('./platforms/xr.js'),//爱奇艺文学
+  
   // 添加其他平台的脚本
 };
 

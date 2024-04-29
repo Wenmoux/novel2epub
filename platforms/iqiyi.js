@@ -138,7 +138,7 @@ async function getContent(bookId, chapterId, ii, title) {
     const result = lines.map(line => `<p>${line}</p>`).join("");
     option.content[ii] = {
         title,
-        data: result
+        content: result
     }
     res.data.text
 }
@@ -153,7 +153,12 @@ async function getNovel(bid) {
     if (detail) {
         option = Object.assign({}, detail);
         await getCon(detail);
-        console.log(option)
+        content = option.content
+        option.volumes= 
+       [ {
+            title: "正文",
+            chapters: content}]
+          //  console.log(option)
         return option
     }
 

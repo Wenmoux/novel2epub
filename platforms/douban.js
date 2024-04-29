@@ -14,6 +14,11 @@ async function getNovel(bid) {
     if (detail) {
         option = Object.assign({}, detail);
         await getCon(detail);
+        content = option.content
+        option.volumes= 
+       [ {
+            title: "正文",
+            chapters: content}]
         return option
     }
 }
