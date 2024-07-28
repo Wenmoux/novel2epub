@@ -4,6 +4,7 @@ const axios = require("axios")
 const cheerio = require("cheerio")
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 let headers = {
+    referer:"https://www.hotupub.net/home/index",
     "Cookie": "",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 }
@@ -19,7 +20,7 @@ async function getNovel(bid) {
         content = option.content
         option.volumes= 
        [ {
-            title: "正文",
+            title: detail.title,
             chapters: content}]
         return option
     }

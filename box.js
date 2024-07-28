@@ -13,7 +13,7 @@ const platforms = {
   'douban': require('./platforms/douban.js'),//豆瓣阅读
   'hotupub': require('./platforms/hotupub.js'),//河图文化
   'iqiyi': require('./platforms/iqiyi.js'),//爱奇艺文学
-  'xr': require('./platforms/xr.js'),//爱奇艺文学
+
   
   // 添加其他平台的脚本
 };
@@ -50,9 +50,10 @@ async function downloadNovel(name, bookid) {
 */
 //  const epub = await createEpub(options);
   const filename = `${novel.title}.epub`;
+  console.log(`Downloaded ${filename} start` )
   await  epub(novel );
 
-  console.log(`Downloaded ${filename}` );
+ ;
 }
 
 if (process.argv[2] === 'web') {

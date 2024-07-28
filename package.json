@@ -4,7 +4,7 @@
   "description": "这是一个下载小说并生成epub脚本",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node box hotupub 679"
   },
   "repository": {
     "type": "git",

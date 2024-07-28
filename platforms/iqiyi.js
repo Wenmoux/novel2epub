@@ -138,7 +138,7 @@ async function getContent(bookId, chapterId, ii, title) {
     const result = lines.map(line => `<p>${line}</p>`).join("");
     option.content[ii] = {
         title,
-        content: result
+        data: result
     }
     res.data.text
 }
@@ -158,7 +158,6 @@ async function getNovel(bid) {
        [ {
             title: "正文",
             chapters: content}]
-          //  console.log(option)
         return option
     }
 
@@ -209,6 +208,7 @@ async function getdetail(bid) {
         description: $(".book-details-briefing").text(),
         content: [],
         bid,
+        tags:"爱奇艺",
         pub: "爱奇艺文学",
         pageNum: Math.ceil(zh / 100)
     };
